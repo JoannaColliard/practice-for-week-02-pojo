@@ -12,7 +12,17 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 ***********************************************************************/
 
 function arrayConverter(array) {
-  // Your code here
+  let obj = {};
+
+  array.forEach((element) => {
+    if (obj.hasOwnProperty(element)) {
+      obj[element] = obj[element] + 1;
+    } else {
+      obj[element] = 1;
+    }
+  });
+
+  return obj;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
